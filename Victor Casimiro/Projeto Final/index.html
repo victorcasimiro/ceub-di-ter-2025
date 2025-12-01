@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Victor Casimiro</title>
+
+    <link rel="stylesheet" href="estilo.css" />
+
+    <!-- FONTE -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap');
+    </style>
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header id="event-subscription">
+      <div id="disclamer">
+        <h2>Victor Casimiro</h2>
+        <p class="about-you">Ciências da Computação 3° semestre | Comunicativo | Sociável | Prestativo</p>
+      </div>
+
+      <!-- FORMULÁRIO -->
+      <div id="subscription-form">
+        <p>Entre em contato:</p>
+
+        <form id="myForm" action="https://formspree.io/f/xldvpvjk" method="POST">
+          <div class="form-group">
+            <label for="name">Nome</label>
+            <input type="text" name="name" placeholder="Digite seu nome" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" name="email" placeholder="Digite seu e-mail" required />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">WhatsApp</label>
+            <input type="text" name="phone" placeholder="Digite seu WhatsApp" />
+          </div>
+
+          <div class="form-group">
+            <label for="interest">Interesse</label>
+            <select name="interest" required>
+              <option value="" disabled selected>Selecione</option>
+              <option value="contratacao">Contratação</option>
+              <option value="freelance">Freelance</option>
+              <option value="mentoria">Mentoria</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Mensagem</label>
+            <textarea name="message" placeholder="Escreva sua mensagem..." required></textarea>
+          </div>
+
+          <input type="text" name="_honey" style="display:none">
+          <input type="hidden" name="_next" value="https://seusite.com/sucesso.html">
+          <input type="submit" class="btn" value="Enviar" />
+        </form>
+      </div>
+    </header>
+
+    <!-- AQUI VEM O MODAL -->
+    <div class="modal-bg" id="modal">
+      <div class="modal">
+        <i class="bi bi-check-circle-fill"></i>
+        <h3>Mensagem enviada com sucesso!</h3>
+        <p>Entrarei em contato.</p>
+        <button class="btn-fechar" onclick="fecharModal()">Fechar</button>
+      </div>
+    </div>
+
+    <!-- SCRIPT -->
+    <script>
+      const form = document.getElementById('myForm');
+      const modal = document.getElementById('modal');
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        }).then(response => {
+          if (response.ok) {
+            modal.style.display = 'flex';
+            form.reset();
+          }
+        });
+      });
+
+      function fecharModal() {
+        modal.style.display = 'none';
+      }
+    </script>
+
+  </body>
+</html>
+
+    <!--SECTION TECHNOLOGYS-->
+
+    <section id="key-technologys">
+      <h2>Tecnologias</h2>
+      <div class="technologys">
+        <div class="technology">
+          <div id="technology-1" class="technology-img"></div>
+          <p>
+            <b>Github:</b> conhecimento nos principais comandos CLI do GIT.
+            Criação de Pull Request com code-review.
+          </p>
+        </div>
+        <div class="technology">
+          <div id="technology-2" class="technology-img"></div>
+          <p>
+            <b>Figma:</b> criação de protótipos com Design System integrado com
+            variáveis de cor e componentização de layouts.
+          </p>
+        </div>
+        <div class="technology">
+          <div id="technology-3" class="technology-img"></div>
+          <p>
+            <b>HTML:</b> criação de páginas utilizando HTML com tags semânticas.
+          </p>
+        </div>
+        <div class="technology">
+          <div id="technology-4" class="technology-img"></div>
+          <p>
+            <b>CSS:</b> estilização de páginas utilizando CSS com uso de
+            variáveis e responsividade por meio de media-query.
+          </p>
+        </div>
+        <div class="technology">
+          <div id="technology-5" class="technology-img"></div>
+          <p>
+            <b>Java Script:</b> manipulação do DOM do HTML atráves de JS,
+            utilizando as interfaces de listener, aplicação de estilos por meio
+            de lógica.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--SECTION ABOUT-->
+    <section id="about">
+      <div id="about-id">
+        <img src="pfp.jpg" class="Profile-pic">
+        <div id="about-details">
+          <p>18 Anos</p>
+          <p>Comprometido</p>
+          <p>Brasília - DF</p>
+        </div>
+      </div>
+      <div id="about-description">
+        <h3>Amante de tecnologias</h3>
+        <p>
+          Estou na faculdade de Ciencias da Computação a 1 ano e sempre 
+          me interecei pela area, creio que minha boa aprendizagem de Ingles
+          possa me ajudar muito a progredir. Minha base veio toda do phytom, porém 
+          sempre em busca da melhora, estou me aprimorando em HTML, Java e CSS. Pretendo
+          me especializar e me destacar dentre essas 3 linguagens. Atualmente estou focado na 
+          minha evolução e estudos, entre tanto, busco também experiencias trabalhistas.
+          Ultimamente tenho feito varios projetos e também cursos sobre as linguagens citadas.
+        </p>
+      </div>
+    </section>
+
+    <!--SECTION PROJECTS-->
+    <!--POSTAR SITES E ADCIONAR LINKS A O MEU PORTIFOLIO-->
+
+    <section id="projects">
+      <div class="project">
+        <img src="projetos/logo_projects.png" />
+        <div class="project-description">
+          <h3>Projetos Profissionais e Contribuições Relevantes</h3>
+        </div>
+      </div>
+      <div class="project">
+        <div class="project-description">
+          <h3>Criação de um Design System no Figma</h3>
+          <ul>
+            <li>
+              Elaboração de uma paleta de cores seguindo as guidelines de
+              identidade visual, incluindo cores primárias, secundárias e
+              terciárias.
+            </li>
+            <li>
+              Definição de tipografias e seus respectivos tamanhos e pesos.
+            </li>
+            <li>
+              Componentização de elementos como botões, menus e demais
+              componentes.
+            </li>
+            <li>
+              Utilização de variáveis para padronizar e otimizar o uso em
+              protótipos reais.
+            </li>
+            <li>
+              Criação de protótipos de alta fidelidade seguindo o princípio
+              mobile first.
+            </li>
+            <li>E muito mais...</li>
+          </ul>
+        </div>
+        <img src="projetos/projeto_1.png" />
+      </div>
+      <div class="project">
+        <img src="projetos/projeto_2.png" />
+        <div class="project-description">
+          <h3>Mini projeto - Lista de tarefas</h3>
+          <ul>
+            <li>
+              Desenvolvimento de uma aplicação de lista de tarefas utilizando
+              HTML, CSS e JavaScript.
+            </li>
+            <li>
+              Manipulação dinâmica do DOM para criação, atualização e remoção de
+              itens, implementando interações responsivas sem o uso de
+              frameworks.
+            </li>
+            <li>
+              Implementação de um CRUD completo em JavaScript puro, incluindo
+              validações básicas e organização do código em funções
+              reutilizáveis.
+            </li>
+            <li>
+              Estruturação da aplicação com foco em boas práticas, como
+              separação de responsabilidades e uso eficiente de eventos.
+            </li>
+            <li>
+              Possibilidade de expansão para uso de LocalStorage, permitindo
+              persistência dos dados no navegador.
+            </li>
+            <li>E muito mais...</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!--FOOTER-->
+
+    <footer id="footer">
+        <h3>Portifolio de Victor Casimiro</h3>
+        <p>Contatos</p>
+        
+        <p>
+            <a href="https://github.com/victorcasimiro">Meu Git</a>
+        </p>
+        <p>
+            <a href="https://www.linkedin.com/in/victor-casimiro-4477082ba">Meu linkedin</a>
+        </p>
+        
+    </footer>
+  </body>
+</html>

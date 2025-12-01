@@ -1,0 +1,105 @@
+/*background e reset*/
+#event-subscription 
+{
+  background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url("Banner.avif");
+  background-position: center ;
+  background-size: cover ;
+  height: 1300px ;
+  display: flex;
+  flex-direction: column;
+}
+
+* 
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*fontes*/
+.coiny-regular 
+{
+  font-family: "Coiny", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*poster*/
+img 
+{
+  width: 75% ;
+  border-radius: 12px;
+  box-shadow: 4px 4px 10px #00000080;
+}
+
+/*título*/
+h1 
+{
+  font-family: "Coiny", system-ui;
+  font-size: 400%;
+  color: #b10000bd; 
+  padding: 15px 20px ;
+  text-shadow: 2px 2px 4px #00000080;
+  letter-spacing: 2px ;
+  text-align: right;
+  margin-bottom: 40px;
+  margin-right:290px;
+}
+
+/* div que contém poster + info */
+.conteudo 
+{
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin-left: 200px;
+}
+
+/* sub–títulos e parágrafo */
+.movie-details h3,
+.movie-details p,
+.movie-details ul li 
+{
+  font-family: "Coiny", system-ui;
+  color: #b10000bd;
+  text-shadow: 2px 2px 4px #00000080;
+}
+
+/* melhora visual */
+.movie-details h3 
+{
+  font-weight: 800;
+  font-size: 250%;
+  margin-bottom: 10px;
+}
+
+.movie-details p 
+{
+  font-size: 220%;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-top: 20px;
+}
+
+.movie-details ul 
+{
+  padding: 20px 20px;
+
+  font-size: 220%;
+}
+
+footer 
+{
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px;
+  color: white;
+  font-family: "Coiny", sans-serif;
+  font-size: 220%;
+}
+
+a 
+{
+  color: #b10000bd;
+  text-decoration: underline;
+}
